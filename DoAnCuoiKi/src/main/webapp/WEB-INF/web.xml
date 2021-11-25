@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>Web Application</display-name>
+
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+
+	<listener>
+		<listener-class>org.apache.tiles.extras.complete.CompleteAutoloadTilesListener
+		</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>Tiles Dispatch</servlet-name>
+		<servlet-class>org.apache.tiles.web.util.TilesDispatchServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Login</display-name>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>controllers.Login</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Register</display-name>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>controllers.Register</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>UpdateProfile</display-name>
+		<servlet-name>UpdateProfile</servlet-name>
+		<servlet-class>controllers.UpdateProfile</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>AddContent</display-name>
+		<servlet-name>AddContent</servlet-name>
+		<servlet-class>controllers.AddContent</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>EditContent</display-name>
+		<servlet-name>EditContent</servlet-name>
+		<servlet-class>controllers.EditContent</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DeleteContent</display-name>
+		<servlet-name>DeleteContent</servlet-name>
+		<servlet-class>controllers.DeleteContent</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>temp</display-name>
+		<servlet-name>temp</servlet-name>
+		<servlet-class>controllers.temp</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Search</display-name>
+		<servlet-name>Search</servlet-name>
+		<servlet-class>controllers.Search</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Tiles Dispatch</servlet-name>
+		<url-pattern>*.tiles</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/Register</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateProfile</servlet-name>
+		<url-pattern>/UpdateProfile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddContent</servlet-name>
+		<url-pattern>/AddContent</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EditContent</servlet-name>
+		<url-pattern>/EditContent</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteContent</servlet-name>
+		<url-pattern>/DeleteContent</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>temp</servlet-name>
+		<url-pattern>/temp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Search</servlet-name>
+		<url-pattern>/Search</url-pattern>
+	</servlet-mapping>
+</web-app>
